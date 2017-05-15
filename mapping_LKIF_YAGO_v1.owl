@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+         <!ENTITY skos  "http://www.w3.org/2004/02/skos/core#">
+         <!ENTITY rdfs	"http://www.w3.org/2000/01/rdf-schema#">     
+	 <!ENTITY rlkif "http://www.estrellaproject.org/lkif-core/legal-role.owl#"> 
+	 <!ENTITY alkif "http://www.estrellaproject.org/lkif-core/legal-action.owl#"> 
+	 <!ENTITY lkif "http://www.estrellaproject.org/lkif-core/norm.owl#">
+	 <!ENTITY yago "http://yago-knowledge.org/resource/">
+]> 
+
+             
+    <rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="&rdfs;"
+        xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xml:base=""
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:cc="http://creativecommons.org/ns#"
+       	xmlns:skos="&skos;"
+	xmlns:rlkif="&rlkif;"
+	xmlns:alkif="&alkif;"
+	xmlns:lkif="&lkif;"
+	xmlns:yago="&yago;">
+	
+	<owl:Ontology rdf:about="http://ns.mirel.eu/mly/v1#">
+		<dc:title xml:lang="en">Alignment of the YAGO ontology and the LKIF ontology</dc:title>
+		<dc:description xml:lang="en">A vocabulary describing the relations among the YAGO and LKIF concepts.</dc:description>
+		<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-01</dc:issued> 
+		<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+     	<cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+	</owl:Ontology>
+
+
+<owl:Class rdf:about="lkif:Code_of_Conduct">
+	<owl:equivalentClass>
+	<owl:Class rdf:about="yago:wordnet_code_of_conduct_105668095"/>
+	</owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_legal_code_106667792">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Regulation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A code of laws adopted by a state or nation; 'a code of laws'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_law_106532330">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Regulation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Legal document setting forth rules governing a particular kind of activity; 'there is a law against kidnapping'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_law_108441203">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Regulation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>The collection of rules imposed by authority; 'civilization presupposes respect for the law'; 'the great problem for jurisprudence to allow freedom while enforcing order' ATTENTION there are many spurious children, like general laws of nature or mathematics</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_legislation_106535222">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Regulation"/>
+    </owl:equivalentClass>
+    <rdfs:comment>Law enacted by a legislative body</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_authorization_101138670">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Permissive_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>The act of conferring legality or sanction or formal warrant.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_proclamation_101266491">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Proclamation"/>
+    </owl:equivalentClass>
+    <rdfs:comment>The formal act of proclaiming; giving public notice; 'his promulgation of the policy proved to be premature'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_decree_106539770">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Decree"/>
+    </owl:equivalentClass>
+    <rdfs:comment>A legally binding command or decision entered on the court record (as if issued by a court or judge), but examples of members are well coincident with the LKIF definition</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wikicat_Legal_doctrines_and_principles">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Legal_Doctrine"/>
+    </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_common_law_108453722">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Legal_Doctrine"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A system of jurisprudence based on judicial precedents rather than statutory laws; 'common law originated in the unwritten laws of England and was later applied in the United States'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_case_law_106535035">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Legal_Doctrine"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>(civil law) A law established by following earlier judicial decisions</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_privilege_105179567">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Liberty_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>(law) The right to refuse to divulge information obtained in a confidential relationship</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_prerogative_105178715">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Liberty_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A right reserved exclusively by a particular person or group (especially a hereditary or official right); 'suffrage was the prerogative of white adult males'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_privilege_105158296">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Liberty_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A special advantage or immunity or benefit not enjoyed by all.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_liberty_113994456">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Liberty_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Freedom of choice; 'liberty of opinion'; 'liberty of worship'; 'liberty--perfect liberty--to think or feel or do just as one pleases'; 'at liberty to choose whatever occupation one wishes'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_liberty_113996061">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Liberty_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Personal freedom from servitude or confinement or oppression</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_civil_liberty_113995662">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Liberty_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>One's freedom to exercise one's rights as guaranteed under the laws of the country</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_contract_106520944">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Contract"/>
+    </owl:equivalentClass>
+    <rdfs:comment>A binding agreement between two or more persons that is enforceable by law</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_legislative_act_106564387">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Statute"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An act passed by a legislative body, it is a hyponym of Statute because a Statute may not necessarily be an act, but a document with norms</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_exemption_100213903">
+    <rdfs:subClassOf> 
+    <owl:Class rdf:about="lkif:Immunity"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An act exempting someone; 'he was granted immunity from prosecution', it is a hyponym because it is an act, not a power in itself</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_treaty_106773434">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Treaty"/>
+    </owl:equivalentClass>
+    <rdfs:comment>A written agreement between two states or sovereigns</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_legal_document_106479665">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Legal_Document"/>
+    </owl:equivalentClass>
+    <rdfs:comment>(law) a document that states some contractual relationship or grants some right</rdfs:comment>
+  </owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_written_agreement_106771653">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Legal_Document"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A legal document summarizing the agreement between parties</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_criminal_record_106490173">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Legal_Document"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A list of crimes for which an accused person has been previously convicted; 'he ruled that the criminal record of the defendant could not be disclosed to the court'; 'the prostitute had a record a mile long'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_mandate_106556481">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Legal_Document"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>The gloss is: a document giving an official instruction or command, but the examples are all missions, not only the document for the mission</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_right_113341756">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Potestative_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>(frequently plural) The interest possessed by law or custom in some intangible thing; 'mineral rights'; 'film rights'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_obligation_106773150/">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Obligation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A legal agreement specifying a payment or action and the penalty for failure to comply</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_permission_106689297">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Permission"/>
+    </owl:equivalentClass>
+    <rdfs:comment>Approval to do something; 'he asked permission to leave'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="lkif:Liability_Right">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Right"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="yago:wordnet_liability_114530403">
+      <rdfs:comment>the state of being legally obliged and responsible</rdfs:comment>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:comment>A liability right expresses some right to act that brings with it some liability to perform another (compensating) act. For instance, if some k performs the permitted action A, then k will have to perform another action B for the benefit of j.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_indebtedness_114490319">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Liability_Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An obligation to pay money to another party</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_right_105174653">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="lkif:Right"/>
+    </owl:equivalentClass>
+    <rdfs:comment>An abstract idea of that which is due to a person or governmental body by law or tradition or nature; 'they are endowed by their Creator with certain unalienable Rights'; 'Certain rights can never be granted to the government but must be kept in the hands of the people'- Eleanor Roosevelt; 'a right is not something that somebody gives you; it is something that nobody can take away'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_right_104850341">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Right"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Anything in accord with principles of justice; 'he feels he is in the right'; 'the rightfulness of his claim'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="lkif:Directive">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="yago:wordnet_directive_107170080">
+      <rdfs:comment>A pronouncement encouraging or banning some activity; 'the boss loves to send us directives'</rdfs:comment>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:comment>Examples are European Union directive, a legislative act of the European Union and Directives, used by United States Government agencies (particularly the Department of Defense) to convey policies, responsibilities, and procedures.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_interdiction_107255299">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Prohibition"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Authoritative prohibition</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_ban_107255401">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Prohibition"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An official prohibition or edict against something</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_prohibition_106542047">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Prohibition"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Decree"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A decree that prohibits something</rdfs:comment>
+</owl:Class>
+
+
+
+<owl:Class rdf:about="yago:wordnet_limited_company_108185211">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="alkif:Limited_Company"/>
+    </owl:equivalentClass>
+    <rdfs:comment>A company that is organized to give its owners limited liability</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_association_108049401">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="alkif:Society"/>
+    </owl:equivalentClass>
+    <rdfs:comment>A formal organization of people or groups of people; 'he joined the Modern Language Association'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_corporation_108059412">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="alkif:Corporation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A business firm whose articles of incorporation have been approved in some state</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_court_108329453">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="alkif:Public_Body"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An assembly (including one or more judges) to conduct judicial business</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_foundation_108406486">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="alkif:Foundation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>An institution supported by an endowment</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_cooperative_101100877">
+    <owl:subClassOf>
+      <owl:Class rdf:about="alkif:Co-operative"/>
+    </owl:subClassOf>
+    <rdfs:comment>A jointly owned commercial enterprise (usually organized by farmers or consumers) that produces and distributes goods and services and is run for the benefit of its owners</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_legislature_108163273">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="alkif:Legislative_Body"/>
+    </owl:equivalentClass>
+    <rdfs:comment>Persons who make or amend or repeal laws</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_delegating_101140839">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="alkif:Delegation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Authorizing subordinates to make certain decisions</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_pleading_106559365">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="alkif:Legal_Speech_Act"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>(law) A statement in legal and logical form stating something on behalf of a party to a legal proceeding</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_company_108058098">
+    <owl:equivalentClass>
+      <owl:Class rdf:about="alkif:Company"/>
+    </owl:equivalentClass>
+    <rdfs:comment>An institution created to conduct business; 'he only invests in large well-established companies'; 'he started the company in his garage'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_party_110402824">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="rlkif:Legal_Role"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A person involved in legal proceedings; 'the party of the first part'</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_judge_110225219">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="rlkif:Professional_Legal_Role"/>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_judiciary_108166187">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="rlkif:Professional_Legal_Role"/>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_lawyer_110249950">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="rlkif:Professional_Legal_Role"/>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="yago:wordnet_article_106392935">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Legal_Document"/>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="new:article_of_convention">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="yago:wordnet_article_106392935"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="lkif:Code"/>
+    </rdfs:subClassOf>
+</owl:Class>
+
+
+
+</rdf:RDF>
